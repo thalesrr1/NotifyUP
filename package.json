@@ -19,5 +19,13 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thalesrr1/UpMSend.git"
+    },
+    "bugs": {
+        "url": "https://github.com/thalesrr1/UpMSend/issues"
+    },
+    "homepage": "https://github.com/thalesrr1/UpMSend#readme",
     "description": ""
 }
