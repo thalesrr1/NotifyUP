@@ -1,5 +1,5 @@
 const express = require('express');
-const emailRoutes = require('./routes/emailRoutes');
+import emailRoutes from './routes/emailRoutes.js';
 
 const app = express();
 

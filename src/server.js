@@ -1,5 +1,5 @@
-require('dotenv').config(); // Carrega .env ANTES de tudo
-const app = require('./app');
+import 'dotenv/config' // Carrega .env ANTES de tudo
+import app from './app.js';
 
 const PORT = process.env.PORT || 3000;
 
