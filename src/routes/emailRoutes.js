@@ -5,6 +5,6 @@ const router = Router();
 
 // Rota para enviar um email de teste (ou qualquer email via API)
 // POST /api/emails/send
-router.post('/send', emailController.enviarEmail); 
+router.post('/send', emailController.sendTestEmail);  // Enviar email de teste 
 
 export default router;
