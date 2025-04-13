@@ -2,21 +2,113 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Bem-vindo!</title>
+    <title>Bem-vindo ao {{appName}}!</title>
     <style>
-        body { font-family: sans-serif; }
-        .container { padding: 20px; border: 1px solid #eee; }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e6ed;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2d3748;
+            margin: 0 0 15px 0;
+            font-size: 24px;
+        }
+        .logo {
+            color: #4a6cf7;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4a6cf7;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .features {
+            margin: 25px 0;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: #4a6cf7;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e6ed;
+            font-size: 13px;
+            color: #718096;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Olá, {{name}}!</h1>
-        <p>Seja muito bem-vindo(a) à nossa plataforma.</p>
-        <p>Estamos felizes em ter você conosco.</p>
-        <p>Se precisar de ajuda, não hesite em nos contatar.</p>
-        <br>
-        <p>Atenciosamente,</p>
-        <p>Equipe do Nosso App</p>
+        <div class="header">
+            <div class="logo">{{appName}}</div>
+            <h1>Seja muito bem-vindo(a), {{name}}!</h1>
+        </div>
+        
+        <p>Estamos muito felizes por você ter se juntado à nossa comunidade. Sua conta foi criada com sucesso e já está pronta para uso.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Acesse todos os recursos da plataforma</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Configuração rápida e intuitiva</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Suporte dedicado sempre que precisar</span>
+            </div>
+        </div>
+        
+        <p style="text-align: center;">
+            <a href="{{dashboardLink}}" class="button">Acessar Minha Conta</a>
+        </p>
+        
+        <p>Se precisar de ajuda para começar, confira nosso <a href="{{helpLink}}">guia de primeiros passos</a> ou entre em contato com nosso time de suporte.</p>
+        
+        <div class="footer">
+            <p>Atenciosamente,</p>
+            <p><strong>Equipe {{appName}}</strong></p>
+            <p style="margin-top: 10px;">
+                <small>Este é um e-mail automático, por favor não responda.</small>
+            </p>
+        </div>
     </div>
 </body>
 </html>
