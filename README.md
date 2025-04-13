@@ -1,4 +1,5 @@
-# Serviço de Email MVP - Backend Node.js
+# NotifyUP
+# Serviço de Email - Node.js
 
 Este projeto é um MVP (Minimum Viable Product) de um serviço de backend Node.js focado no envio de emails transacionais. Ele utiliza templates HTML (Handlebars) e configurações externalizadas via arquivo `.env`.
 
@@ -22,7 +23,7 @@ Este projeto é um MVP (Minimum Viable Product) de um serviço de backend Node.j
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <(https://github.com/thalesrr1/NotifyUP)>
+    git clone https://github.com/thalesrr1/NotifyUP
     cd email-service-mvp
     ```
 
