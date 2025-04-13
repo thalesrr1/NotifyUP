@@ -19,5 +19,5 @@ class EmailController {
         }
     }
 }
-
-export const emailController = new EmailController();
+const emailController = new EmailController()
+export default emailController;
