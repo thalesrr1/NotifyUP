@@ -5,7 +5,6 @@ import {parseTemplate} from '../utils/templateParser.js';
 
 class emailService {
 
-    async send() {
     /**
    * Envia um email usando um template e contexto definidos.
    * @param {string} to - Endereço de email do destinatário.
@@ -16,7 +15,28 @@ class emailService {
    * @returns {Promise<object>} - Informações sobre o envio (messageId, etc.) ou lança erro.
    * @throws {Error} Se houver falha no envio ou no processamento do template.
    */
+    async send() {
+        if (!to || !templateName) {
+            throw new Error('Destinatário e nome do template são obrigatórios.');
+        }
+
+        console.log(`Preparando envio de email para ${to} usando template ${templateName}...`);
+
         try {
+            const {subject, body} = await parseTemplate(templateName, context); 
+
+            const mailOptions = {
+                from: from,
+                to: to, // Pode ser uma string ou array de strings
+                subject: subject,
+                html: body,// Corpo do email em HTML
+                // text: 'Versão em texto puro do email (opcional)', // Fallback para clientes sem HTML
+                ...options // Permite adicionar anexos, headers customizados, etc.
+            };
+
+            console.log('Opções do email:', mailOptions);
+            const info = await transporter.sendMail(mailOptions);
+            console.log(`Enviando email para ${to}...Mensage id: ${info.messageId}`);
             
         } catch (error) {
             
