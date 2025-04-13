@@ -1,6 +1,6 @@
 // const{ transporter, defautFrom } = require('../config/nodemailer');
 // const { parseTemplate } = require('../utils/templateParser');
-import { transporter, defaultFrom } from '../config/nodemailer.js';
+import { transporter } from '../config/mailConfig.js';
 import {parseTemplate} from '../utils/templateParser.js';
 
 class emailService {
@@ -54,4 +54,4 @@ class emailService {
     }
 }
 
-module.exports = new EmailService();
+module.exports = new emailService();
