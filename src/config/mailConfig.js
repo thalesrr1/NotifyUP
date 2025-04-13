@@ -1,5 +1,6 @@
-require('dotenv').config(); // Carrega as variáveis do .env
-const nodemailer = require('nodemailer');
+import { createTransport } from 'nodemailer';
+import dotenv from 'dotenv';
+dotenv.config(); // Carrega as variáveis do .env
 
 const mailConfig = {
     host: process.env.MAIL_HOST,
@@ -19,7 +20,7 @@ const mailConfig = {
 };
 
 // Cria o "transporter" reutilizável com a configuração definida
-const transporter = nodemailer.createTransport(mailConfig);
+const transporter = createTransport(mailConfig);
 
 transporter.verify((error, success) => {
     if (error) {
@@ -29,7 +30,5 @@ transporter.verify((error, success) => {
     }
 });
 
-module.exports = {
-    transporter,
-    defaultFrom: process.env.MAIL_FROM_ADDRESS || '"Seu App" <no-reply@example.com>',
-};
+export { transporter };
+export const defaultFrom = process.env.MAIL_FROM_ADDRESS || '"Seu App" <no-reply@example.com>';

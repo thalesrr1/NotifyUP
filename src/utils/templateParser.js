@@ -1,7 +1,7 @@
-const fs = require('fs').promises; // Usar versão de Promises do fs
-const path = require('path');
-const handlebars = require('handlebars');
-const { ifError } = require('assert');
+import { promises as fs } from 'fs'; // Use Promises version of fs
+import path from 'path';
+import handlebars from 'handlebars';
+import { ifError } from 'assert';
 
 // Cache simples para templates compilados (melhora performance)
 const compiledTemplates = {};
@@ -14,7 +14,7 @@ const compiledTemplates = {};
  * @throws {Error} Se o template não for encontrado ou houver erro na leitura/compilação.
  */
 
-parseTemplate = async (templateName, context = {}) => {
+const parseTemplate = async (templateName, context = {}) => {
     const templateDir = path.join(__dirname, '..', 'templates', templateName);
     const subjectPath = path.join(templateDir, 'subject.hbs');
     const bodyPath = path.join(templateDir, 'body.hbs');
@@ -52,4 +52,4 @@ parseTemplate = async (templateName, context = {}) => {
     }
 }
 
-module.exports = {parseTemplate};
+export default parseTemplate;

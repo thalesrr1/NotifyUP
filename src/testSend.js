@@ -1,6 +1,7 @@
 // src/testSend.js
-require('dotenv').config(); // Garante que as variáveis de ambiente sejam carregadas
-import send from '../src/services/EmailService.js'; // Ajuste o caminho conforme necessário
+import send from './services/EmailService.js'; // Ajuste o caminho conforme necessário
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function runTest() {
     console.log('Iniciando teste de envio de email...');

@@ -1,4 +1,4 @@
-const EmailService = require('../services/EmailService');
+import EmailService from '../services/EmailService.js';
 
 class EmailController {
     async sendTestEmail(req, res) {
@@ -20,4 +20,4 @@ class EmailController {
     }
 }
 
-module.exports = new EmailController();
+export const emailController = new EmailController();

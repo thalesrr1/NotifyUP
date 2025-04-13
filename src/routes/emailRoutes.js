@@ -1,10 +1,10 @@
-const express = require('express');
-const EmailController = require('../controllers/EmailController');
+import { Router } from 'express';
+import { emailController } from '../controllers/EmailController.js';
 
-const router = express.Router();
+const router = Router();
 
 // Rota para enviar um email de teste (ou qualquer email via API)
 // POST /api/emails/send
-router.post('/send', EmailController.sendTestEmail);
+router.post('/send', emailController);
 
-module.exports = router;
+export default router;
