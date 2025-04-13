@@ -1,7 +1,12 @@
-import { promises as fs } from 'fs'; // Use Promises version of fs
+import { fileURLToPath } from 'url';
 import path from 'path';
+import { promises as fs } from 'fs'; // Use Promises version of fs
 import handlebars from 'handlebars';
 import { ifError } from 'assert';
+
+// Compatível com ESM (resolve __dirname)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Cache simples para templates compilados (melhora performance)
 const compiledTemplates = {};

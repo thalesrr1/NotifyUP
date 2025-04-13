@@ -3,7 +3,8 @@ import EmailService from '../services/EmailService.js';
 class EmailController {
     async sendTestEmail(req, res) {
         const { to, templateName, context } = req.body;
-
+        
+        console.log(req.body);  
         // Validação básica de entrada
         if (!to || !templateName) {
             return res.status(400).json({ error: 'Campos "to" e "templateName" são obrigatórios.' });
@@ -19,5 +20,7 @@ class EmailController {
         }
     }
 }
+
+
 const emailController = new EmailController()
 export default emailController;

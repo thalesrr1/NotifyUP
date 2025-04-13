@@ -13,7 +13,7 @@ class EmailService {
    * @returns {Promise<object>} - Informações sobre o envio (messageId, etc.) ou lança erro.
    * @throws {Error} Se houver falha no envio ou no processamento do template.
    */
-    async send() {
+    async send(to, templateName, context = {}, from = null, options = {}) {
         if (!to || !templateName) {
             throw new Error('Destinatário e nome do template são obrigatórios.');
         }
