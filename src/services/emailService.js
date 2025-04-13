@@ -37,9 +37,21 @@ class emailService {
             console.log('Opções do email:', mailOptions);
             const info = await transporter.sendMail(mailOptions);
             console.log(`Enviando email para ${to}...Mensage id: ${info.messageId}`);
-            
+
+            return info; // Retorna informações do envio (messageId, etc.)
         } catch (error) {
+            //Erro pode ser de leitura do template ou envio do email
+            console.log(`Falha ao enviar email para ${to} usando template ${templateName}:`, error);
+            // Vou adicionar lógicas mais complexas:
+            // - Tentar reenviar? (loops de reenvio)
+            // - Enviar para um serviço de monitoramento de erros (Sentry, etc.)
+            // - Salvar a falha em um banco de dados para análise posterior
+            // - Retornar um erro mais específico dependendo do código do erro do Nodemailer
             
+            // Por enquanto, mostro o erro para quem chamou o serviço saber da falha
+            throw new Error(`Falha no envio do email: ${error.message}`);
         }
     }
 }
+
+module.exports = new EmailService();
