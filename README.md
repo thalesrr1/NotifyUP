@@ -24,7 +24,6 @@ Este projeto backend Node.js é focado no envio de emails transacionais. Ele uti
 1.  **Clone o repositório:**
     ```bash
     git clone https://github.com/thalesrr1/NotifyUP
-    cd email-service-mvp
     ```
 
 2.  **Instale as dependências:**
