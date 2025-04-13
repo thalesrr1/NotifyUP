@@ -1,5 +1,5 @@
 # NotifyUP
-# Serviço de Email - Node.js
+## Serviço de Email - Node.js
 
 Este projeto é um MVP (Minimum Viable Product) de um serviço de backend Node.js focado no envio de emails transacionais. Ele utiliza templates HTML (Handlebars) e configurações externalizadas via arquivo `.env`.
 
