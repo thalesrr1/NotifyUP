@@ -26,9 +26,9 @@ class emailService {
             const {subject, body} = await parseTemplate(templateName, context); 
 
             const mailOptions = {
-                from: from,
+                from: from, // Remetente do email (opcional)
                 to: to, // Pode ser uma string ou array de strings
-                subject: subject,
+                subject: subject, // Assunto do email
                 html: body,// Corpo do email em HTML
                 // text: 'Versão em texto puro do email (opcional)', // Fallback para clientes sem HTML
                 ...options // Permite adicionar anexos, headers customizados, etc.
