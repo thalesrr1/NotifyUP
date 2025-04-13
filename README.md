@@ -14,7 +14,7 @@ Este projeto é um MVP (Minimum Viable Product) de um serviço de backend Node.j
 ## Pré-requisitos
 
 *   [Node.js](https://nodejs.org/) (versão LTS recomendada)
-*   [npm](https://www.npmjs.com/) (geralmente vem com o Node.js) ou [Yarn](https://yarnpkg.com/)
+*   [npm](https://www.npmjs.com/) 
 *   [Git](https://git-scm.com/)
 *   (Opcional) [Postman](https://www.postman.com/) ou similar para testar a API.
 
@@ -22,15 +22,13 @@ Este projeto é um MVP (Minimum Viable Product) de um serviço de backend Node.j
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone <(https://github.com/thalesrr1/NotifyUP)>
     cd email-service-mvp
     ```
 
 2.  **Instale as dependências:**
     ```bash
     npm install
-    # ou
-    # yarn install
     ```
 
 ## Configuração
@@ -185,12 +183,8 @@ O sistema de templates é projetado para ser simples e extensível. Para adicion
 
 ## Próximos Passos (Sugestões)
 
-*   Implementar um sistema de filas (ex: BullMQ) para envio assíncrono.
+*   Implementar um sistema de filas para envio assíncrono.
 *   Melhorar o tratamento de erros e logging (ex: Winston, Sentry).
-*   Adicionar testes automatizados (unitários e de integração).
 *   Desenvolver uma interface frontend para gerenciar configurações e templates.
 *   Abstrair o provedor de email (permitir SES, SendGrid, etc.).
-
-## Licença
-
-[Defina sua licença aqui, ex: MIT]
+*   Adicionar testes automatizados (unitários e de integração).
