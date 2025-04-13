@@ -11,8 +11,8 @@ app.use('/api/emails', emailRoutes);
 
 // Middleware básico de tratamento de erro (exemplo)
 app.use((err, req, res, next) => {
-  console.error("Erro não tratado:", err.stack);
-  res.status(500).send('Algo deu errado no servidor!');
+    console.error("Erro não tratado:", err.stack);
+    res.status(500).send('Algo deu errado no servidor!');
 });
 
 
