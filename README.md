@@ -204,7 +204,7 @@ O sistema de templates é projetado para ser simples e extensível. Para adicion
 
 4.  **Pronto!** O `EmailService` e o `templateParser` encontrarão automaticamente sua nova pasta e arquivos quando você usar o `templateName` correspondente. Não é necessário registrar o template em nenhum outro lugar no código.
 
-## ⏭️ Próximos Passos (Sugestões)
+## ⏭️ Próximos Passos (Aceito sugestões)
 
 * ⏱️ Implementar um sistema de filas para envio assíncrono.
 * Melhorar o tratamento de erros e logging (ex: Winston, Sentry).
